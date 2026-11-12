@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OpenDocs</string>
+    <string name="open_with_opendocs">Ouvrir avec OpenDocs</string>
+    <string name="settings">Parametres</string>
+
+    <!-- Accueil -->
+    <string name="open_document">Ouvrir un document</string>
+    <string name="no_recent_title">Aucun document</string>
+    <string name="no_recent_body">Ouvrez un fichier DOCX, PPTX, XLSX ou CSV pour commencer. OpenDocs lit tout hors ligne, sans permission.</string>
+    <string name="supported_formats">Formats pris en charge : DOCX, PPTX, XLSX, CSV</string>
+    <string name="recent_empty_hint">Les documents ouverts apparaitront ici.</string>
+    <string name="clear_recents">Effacer la liste</string>
+    <string name="recents_cleared">Liste des documents recents effacee</string>
+    <string name="remove_from_recents">Retirer de la liste</string>
+
+    <!-- Lecteur -->
+    <string name="tab_content">Contenu</string>
+    <string name="tab_text">Texte</string>
+    <string name="tab_properties">Proprietes</string>
+    <string name="search">Rechercher</string>
+    <string name="search_hint">Rechercher dans le document</string>
+    <string name="search_no_result">Aucun resultat</string>
+    <plurals name="search_results">
+        <item quantity="one">%1$d resultat</item>
+        <item quantity="other">%1$d resultats</item>
+    </plurals>
+    <string name="share_text">Partager le texte</string>
+    <string name="share_file">Partager le fichier</string>
+    <string name="copy_text">Copier le texte</string>
+    <string name="copied">Texte copie</string>
+    <string name="share_via">Partager avec</string>
+    <string name="slide_counter">Diapositive %1$d / %2$d</string>
+    <string name="sheet_counter">Feuille %1$d / %2$d</string>
+    <string name="notes">Notes du presentateur</string>
+    <string name="loading">Analyse du document...</string>
+    <string name="empty_document">Ce document ne contient aucun contenu affichable.</string>
+    <string name="image_placeholder">[Image]</string>
+    <string name="truncated_notice">Affichage limite aux premieres lignes et colonnes.</string>
+
+    <!-- Proprietes -->
+    <string name="section_file">Fichier</string>
+    <string name="section_metadata">Metadonnees</string>
+    <string name="section_stats">Statistiques</string>
+    <string name="section_warnings">Avertissements</string>
+    <string name="prop_name">Nom</string>
+    <string name="prop_type">Type</string>
+    <string name="prop_size">Taille</string>
+    <string name="prop_parse_time">Temps d\'analyse</string>
+    <string name="prop_title">Titre</string>
+    <string name="prop_subject">Sujet</string>
+    <string name="prop_author">Auteur</string>
+    <string name="prop_description">Description</string>
+    <string name="prop_keywords">Mots-cles</string>
+    <string name="prop_created">Cree le</string>
+    <string name="prop_modified">Modifie le</string>
+    <string name="prop_last_modified_by">Derniere modification par</string>
+    <string name="prop_revision">Revision</string>
+    <string name="prop_application">Application</string>
+    <string name="prop_none">Aucune information</string>
+
+    <!-- Parametres -->
+    <string name="pref_appearance">Apparence</string>
+    <string name="pref_theme_system">Suit le systeme</string>
+    <string name="pref_theme_light">Clair</string>
+    <string name="pref_theme_dark">Sombre</string>
+    <string name="pref_reading">Lecture</string>
+    <string name="pref_font_scale">Taille du texte</string>
+    <string name="pref_font_scale_value">%1$d %%</string>
+    <string name="pref_storage">Donnees locales</string>
+    <string name="pref_recents_count">Documents recents conserves</string>
+    <string name="pref_privacy">OpenDocs ne demande aucune permission et n\'accede jamais au reseau. Les fichiers sont lus uniquement quand vous les choisissez.</string>
+    <string name="pref_about">A propos</string>
+    <string name="about_version">Version %1$s</string>
+    <string name="about_license">Logiciel libre sous licence Apache 2.0.</string>
+
+    <!-- Erreurs -->
+    <string name="error_title">Impossible d\'ouvrir le document</string>
+    <string name="error_io">Le fichier n\'a pas pu etre lu.</string>
+    <string name="error_details">Details</string>
+    <string name="close">Fermer</string>
+    <string name="cancel">Annuler</string>
+    <string name="delete">Supprimer</string>
+    <string name="no_app_for_share">Aucune application pour partager</string>
+</resources>

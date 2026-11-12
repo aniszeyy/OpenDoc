@@ -1,0 +1,29 @@
+# Catalogue de versions Gradle (version catalog).
+# Regle du projet : AUCUNE dependance tierce pour le parsing Office.
+# Seules les bibliotheques AndroidX / Material (UI + cycle de vie) sont utilisees.
+[versions]
+agp = "8.13.2"
+appcompat = "1.7.1"
+material = "1.12.0"
+recyclerview = "1.4.0"
+viewpager2 = "1.1.0"
+constraintlayout = "2.2.1"
+lifecycle = "2.8.7"
+documentfile = "1.1.0"
+annotation = "1.9.1"
+junit = "4.13.2"
+
+[libraries]
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
+androidx-viewpager2 = { group = "androidx.viewpager2", name = "viewpager2", version.ref = "viewpager2" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "lifecycle" }
+androidx-lifecycle-livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata", version.ref = "lifecycle" }
+androidx-documentfile = { group = "androidx.documentfile", name = "documentfile", version.ref = "documentfile" }
+androidx-annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }

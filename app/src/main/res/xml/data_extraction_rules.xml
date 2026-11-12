@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Regles de transfert/sauvegarde (API 31+). Meme logique que backup_rules.xml. -->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="sharedpref" path="opendocs_recents.xml" />
+        <exclude domain="file" path="documents" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="file" path="documents" />
+    </device-transfer>
+</data-extraction-rules>

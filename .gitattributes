@@ -1,0 +1,14 @@
+# Normalisation des fins de ligne et protection des binaires.
+* text=auto
+
+# gradlew doit rester en LF : en CRLF il casse en bash / WSL apres un clone Windows.
+gradlew text eol=lf
+*.sh text eol=lf
+*.bat text eol=crlf
+
+*.jar binary
+*.png binary
+*.jpg binary
+*.docx binary
+*.xlsx binary
+*.pptx binary

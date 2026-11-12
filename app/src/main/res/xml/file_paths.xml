@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Chemins partageables via FileProvider : uniquement le cache d'export. -->
+<paths>
+    <cache-path name="exports" path="exports/" />
+    <cache-path name="imports" path="imports/" />
+</paths>

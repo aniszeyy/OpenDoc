@@ -1,0 +1,25 @@
+# Gradle / build
+.gradle/
+build/
+app/build/
+local.properties
+*.hprof
+.cxx/
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+.DS_Store
+captures/
+output.json
+
+# Keystores / cles (ne jamais committer)
+*.jks
+*.keystore
+keystore.properties
+
+# Livrables generes
+/dist/
+*.apk
+*.aab
+!gradle/wrapper/gradle-wrapper.jar

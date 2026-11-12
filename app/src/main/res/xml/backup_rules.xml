@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Sauvegarde automatique (API 23-30). Les URI du Storage Access Framework et
+  le cache d'analyse ne survivent pas a une restauration : on exclut les
+  fichiers importes et la liste des recents. Le domaine "cache" n'existe pas
+  pour la sauvegarde (le cache n'est jamais sauvegarde).
+-->
+<full-backup-content>
+    <exclude domain="sharedpref" path="opendocs_recents.xml" />
+    <exclude domain="file" path="documents" />
+</full-backup-content>

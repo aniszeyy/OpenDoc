@@ -1,0 +1,90 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'org.opendocs.reader'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "org.opendocs.reader"
+        minSdk 24            // Android 7.0 : ~98 % du parc
+        targetSdk 36         // Android 16
+        versionCode 1
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+            versionNameSuffix "-debug"
+            minifyEnabled false
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            // Signature de debug pour produire un APK release installable immediatement.
+            // Pour publier : creer un keystore et remplacer par signingConfigs.release (voir README).
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+
+    packaging {
+        resources {
+            excludes += ['META-INF/DEPENDENCIES', 'META-INF/LICENSE*', 'META-INF/NOTICE*', 'META-INF/*.kotlin_module']
+        }
+    }
+
+    testOptions {
+        unitTests {
+            returnDefaultValues = true
+            all {
+                testLogging {
+                    events "passed", "skipped", "failed"
+                    exceptionFormat "full"
+                }
+            }
+        }
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+        disable += ['MissingTranslation', 'TypographyEllipsis']
+    }
+}
+
+// Les sources contiennent des commentaires accentues : encodage force.
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    // UI / cycle de vie uniquement. Le parsing OOXML et CSV est ecrit a la main :
+    // java.util.zip + SAX (javax.xml.parsers), zero dependance tierce.
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.recyclerview
+    implementation libs.androidx.viewpager2
+    implementation libs.androidx.constraintlayout
+    implementation libs.androidx.lifecycle.viewmodel
+    implementation libs.androidx.lifecycle.livedata
+    implementation libs.androidx.documentfile
+    implementation libs.androidx.annotation
+
+    testImplementation libs.junit
+}

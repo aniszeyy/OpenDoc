@@ -1,0 +1,8 @@
+// Build racine : aucun plugin applique ici, tout est declare dans :app
+plugins {
+    alias(libs.plugins.android.application) apply false
+}
+
+tasks.register('clean', Delete) {
+    delete rootProject.layout.buildDirectory
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/reading_padding"
+    android:paddingTop="@dimen/space_sm"
+    android:paddingEnd="@dimen/reading_padding"
+    android:paddingBottom="@dimen/space_sm"
+    android:scrollbars="horizontal">
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*" />
+</HorizontalScrollView>

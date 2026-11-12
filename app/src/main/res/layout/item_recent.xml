@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/space_md"
+    android:layout_marginTop="@dimen/space_xs"
+    android:layout_marginEnd="@dimen/space_md"
+    android:layout_marginBottom="@dimen/space_xs"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:strokeColor="?attr/colorOutlineVariant"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_md">
+
+        <TextView
+            android:id="@+id/badge"
+            android:layout_width="@dimen/badge_size"
+            android:layout_height="@dimen/badge_size"
+            android:gravity="center"
+            android:textColor="#FFFFFFFF"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_md"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="middle"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+
+            <TextView
+                android:id="@+id/meta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                android:textColor="?attr/colorOnSurfaceVariant" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/remove"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/remove_from_recents"
+            android:src="@drawable/ic_close"
+            app:tint="?attr/colorOnSurfaceVariant" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
